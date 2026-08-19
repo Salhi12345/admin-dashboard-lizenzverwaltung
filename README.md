@@ -13,5 +13,13 @@ https://unlocktool-system-managment.vercel.app/index.html
 screenshots :
 <img width="1436" height="856" alt="image" src="https://github.com/user-attachments/assets/558f5de9-347a-46b1-adab-2d11c0c54316" />
 
-## 🔐 Admin Login Credentials
-+212772016185
+## Hinweis zum Sicherheitskonzept
+
+Dies ist eine **reine Frontend-Demo**. Die Zugangsdaten stehen im JavaScript und die
+Sitzung wird nur im `localStorage` markiert. Das ist **keine echte Absicherung**: Jede
+Person kann den Quelltext lesen oder den Wert im Browser selbst setzen.
+
+Fuer einen produktiven Einsatz muesste die Anmeldung serverseitig geprueft werden
+(Passwort-Hash in einer Datenbank, Sitzung ueber ein HttpOnly-Cookie oder ein signiertes
+Token), und der Server duerfte die Dashboard-Daten erst nach erfolgreicher Pruefung
+ausliefern.

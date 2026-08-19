@@ -420,6 +420,10 @@
                     this.showError('password', '[ ERROR: INVALID_ADMIN_CREDENTIALS ]');
                     return;
                 }
+                // Anmeldung erfolgreich -> Sitzungskennzeichen setzen.
+                // Ohne diese Zeile findet dashboard.html keinen Token und
+                // leitet sofort zur Login-Seite zurueck (Endlosschleife).
+                localStorage.setItem('unlocktool_token', 'authenticated');
                 this.setLoading(true);
                 await new Promise(r => setTimeout(r, 1500));
                 this.showSuccess();
