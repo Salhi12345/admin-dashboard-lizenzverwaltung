@@ -86,7 +86,6 @@
         <div class="nav-item"><a href="#" class="nav-link" id="bugsToggle"><i class="fas fa-bug"></i> Bugs & Problems <i class="fas fa-chevron-down"></i></a><div class="submenu" id="bugsSubmenu"><a href="#" class="nav-link" data-page="bugs-overview">🐞 Bugs Overview</a><a href="#" class="nav-link" data-page="problems-in-acts">⚠️ Problems in Acts</a><a href="#" class="nav-link" data-page="recent-issues">📋 Recent Issues</a></div></div>
         <div class="nav-item"><a href="#" class="nav-link" data-page="export"><i class="fas fa-download"></i> Export Center</a></div>
         <div class="nav-item"><a href="#" class="nav-link" data-page="settings"><i class="fas fa-cog"></i> Settings</a></div>
-        <div class="nav-item"><a href="#" id="logoutBtn" class="nav-link text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
     </div>
 </div>
 <div class="main-content" id="mainContent">
@@ -100,9 +99,6 @@
     <div id="settings-page" class="page-section"><div class="glass-card p-5"><h2>⚙️ Settings</h2><button id="resetDataBtn" class="btn-glass mt-3">Reset to Default Data</button></div></div>
 </div>
 <script>
-// ========== PROTECTION ==========
-if (localStorage.getItem('unlocktool_token') !== 'authenticated') window.location.href = 'index.html';
-document.getElementById('logoutBtn')?.addEventListener('click', (e) => { e.preventDefault(); localStorage.removeItem('unlocktool_token'); window.location.href = 'index.html'; });
 
 // ========== SIDEBAR TOGGLE (works on all screen sizes) ==========
 const sidebar = document.getElementById('sidebar');
